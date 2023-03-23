@@ -13,6 +13,7 @@ public class MyInterceptor implements HandlerInterceptor {
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         System.out.println("11");
         System.out.println("m2");
+        System.out.println("m1");
     }
 
     @Override
