@@ -19,6 +19,7 @@ public class MyInterceptor implements HandlerInterceptor {
 
     @Override
     public String toString() {
+        System.out.println();
         return "yth";
     }
 }
