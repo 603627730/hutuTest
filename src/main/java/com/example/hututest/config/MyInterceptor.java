@@ -14,6 +14,7 @@ public class MyInterceptor implements HandlerInterceptor {
         System.out.println("11");
         System.out.println("m2");
         System.out.println("m1");
+        System.out.println("1233");
     }
 
     @Override
