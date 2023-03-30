@@ -38,11 +38,7 @@ public class Producer {
             SendResult sendResult = producer.send(msg);
             // 打印返回结果
             System.out.println(sendResult);
-        } catch (RemotingException e) {
-            e.printStackTrace();
-        } catch (MQBrokerException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
+        } catch (RemotingException | MQBrokerException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         //发送完消息之后，调用shutdown()方法关闭producer

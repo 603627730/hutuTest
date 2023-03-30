@@ -12,8 +12,10 @@ import java.util.concurrent.Future;
 
 public class Main {
     public static void main(String[] args) {
-        String s = "";
-        System.out.println(s.length());
+        String s = "32133333";
+        s = s.replaceAll("(\\d{4}).*(\\d{4})", "$1****$2");
+        System.out.println(s);
+
 
     }
 }
