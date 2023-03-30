@@ -10,6 +10,8 @@ import java.util.concurrent.Future;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("aa" + null);
+        String s = "***33";
+        String ss = "1*33";
+        System.out.println(s.substring(Math.max(s.length() - 4, 0)));
     }
 }
