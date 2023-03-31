@@ -28,8 +28,10 @@ public class UserController {
 //验证图形验证码的有效性，返回boolean值
 
 //验证图形验证码的有效性，返回boolean值
-        lineCaptcha.write(httpResponse.getOutputStream());
 
+System.out.println(1111);
+        lineCaptcha.write(httpResponse.getOutputStream());
+        System.out.println(1111);
     }
 
     @GetMapping("send/{mail}")
