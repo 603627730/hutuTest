@@ -37,7 +37,7 @@ public class Consumer {
             public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> msgs,
                                                             ConsumeConcurrentlyContext context) {
 
-                System.out.println(Thread.currentThread().getName() + " Receive New Messages: " + msgs);
+                System.out.println(new String(msgs.get(0).getBody()));
                 System.out.println("----------------------------------------------------------------------------------");
                 //返回消费状态
                 //CONSUME_SUCCESS 消费成功

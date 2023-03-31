@@ -9,9 +9,11 @@ import org.apache.rocketmq.remoting.common.RemotingHelper;
 import org.apache.rocketmq.remoting.exception.RemotingException;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Scanner;
 
 public class Producer {
     public static void main(String[] args) throws MQClientException, InterruptedException {
+        Scanner sc = new Scanner(System.in);
 
         // 声明并初始化一个producer
         // 需要一个producer group名字作为构造方法的参数，这里为producer1
@@ -28,16 +30,19 @@ public class Producer {
 
         // 发送1条消息到Topic为TopicTest，tag为TagA，消息内容为“Hello RocketMQ”拼接上i的值
         try {
-            // 封装消息
-            Message msg = new Message("TopicTest",// topic
-                    "TagA",// tag
-                    ("Hello RocketMQ").getBytes(RemotingHelper.DEFAULT_CHARSET)// body
-            );
-            // 调用producer的send()方法发送消息
-            // 这里调用的是同步的方式，所以会有返回结果
-            SendResult sendResult = producer.send(msg);
-            // 打印返回结果
-            System.out.println(sendResult);
+            while (true) {
+                String s = sc.next();
+                // 封装消息
+                Message msg = new Message("TopicTest",// topic
+                        "TagA",// tag
+                        (s).getBytes(RemotingHelper.DEFAULT_CHARSET)// body
+                );
+                // 调用producer的send()方法发送消息
+                // 这里调用的是同步的方式，所以会有返回结果
+                SendResult sendResult = producer.send(msg);
+                // 打印返回结果
+                System.out.println(sendResult);
+            }
         } catch (RemotingException | MQBrokerException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
