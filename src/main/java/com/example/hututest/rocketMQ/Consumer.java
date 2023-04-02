@@ -43,9 +43,9 @@ public class Consumer {
                 //CONSUME_SUCCESS 消费成功
                 //RECONSUME_LATER 消费失败，需要稍后重新消费
                 return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
+//2
 
-
-//                111
+//                22
             }
         });
         //调用start()方法启动consumer
