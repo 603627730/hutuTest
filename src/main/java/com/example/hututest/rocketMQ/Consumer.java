@@ -43,11 +43,9 @@ public class Consumer {
                 //CONSUME_SUCCESS 消费成功
                 //RECONSUME_LATER 消费失败，需要稍后重新消费
                 return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
-//2
-
-//                22
-//                43
-
+//                1. 从broker拉取消息
+//                2. 消费者消费消息
+//                3. 消费者提交消费进度
             }
         });
         //调用start()方法启动consumer
