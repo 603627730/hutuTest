@@ -44,6 +44,7 @@ public class Consumer {
                 //RECONSUME_LATER 消费失败，需要稍后重新消费
                 return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
 
+
             }
         });
         //调用start()方法启动consumer
