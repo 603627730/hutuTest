@@ -29,6 +29,7 @@ public class UserController {
 
 //验证图形验证码的有效性，返回boolean值
         lineCaptcha.write(httpResponse.getOutputStream());
+//11
 //        t1
 //        t2
 
