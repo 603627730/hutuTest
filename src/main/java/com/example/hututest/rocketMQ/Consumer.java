@@ -45,6 +45,7 @@ public class Consumer {
                 return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
 
 
+//                111
             }
         });
         //调用start()方法启动consumer
