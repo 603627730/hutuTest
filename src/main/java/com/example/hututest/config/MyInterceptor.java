@@ -12,11 +12,24 @@ public class MyInterceptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         System.out.println("11");
-        System.out.println("abc");
+        System.out.println("m2");
+        System.out.println("m1");
+        System.out.println("m1");
+        System.out.println("m1");
+        System.out.println("m1");
+        System.out.println("m1");
+        System.out.println("m1");
+
+//        11
+//        fff
     }
 
     @Override
     public String toString() {
+        System.out.println();
+//        111
         return "yth";
+//        return "yth";
+//        return "yth";
     }
 }
