@@ -2,18 +2,21 @@ package com.example.hututest.test;
 
 import com.example.hututest.config.Payment;
 import com.example.hututest.io.UserController;
+import com.example.hututest.mockito.User;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class Main {
     public static void main(String[] args) {
-        Optional<Payment> payment = Optional.empty();
-        if (payment.isPresent()){
+        new Runnable() {
+            @Override
+            public void run() {
 
-            System.out.println(payment.get());
-        }
-        Payment payment1 = payment.orElse(new Payment());
-        System.out.println(payment1);
+                System.out.println("111");
+            }
+        }.run();
 
     }
 }
