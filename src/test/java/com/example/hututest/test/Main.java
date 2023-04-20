@@ -10,13 +10,8 @@ import java.util.Optional;
 
 public class Main {
     public static void main(String[] args) {
-        new Runnable() {
-            @Override
-            public void run() {
-
-                System.out.println("111");
-            }
-        }.run();
+        int X = 2;
+        System.out.println((++X)*(X++)/3+X);
 
     }
 }
