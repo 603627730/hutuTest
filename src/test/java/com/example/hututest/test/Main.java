@@ -16,6 +16,10 @@ public class Main {
         s = s.replaceAll("(\\d{4}).*(\\d{4})", "$1****$2");
         System.out.println(s);
 
+        int x = 2;
+        System.out.println(++x * x++);
+        x = 2;
+        System.out.println((++x) * (x++) / 3 + x);
 
     }
 }
