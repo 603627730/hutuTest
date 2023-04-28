@@ -1,3 +1,5 @@
+package com.example.hututest;
+
 //
 //package com.alaeat.aio.payment.domain.chargeback;
 //
@@ -107,3 +109,9 @@
 //    @Test
 //    public
 //}
+public class ThreadInterruptedDemo {
+    public static void main(String[] args) {
+        int i =12;
+        System.out.println(i+=i-=i*=i);
+    }
+}
