@@ -24,9 +24,9 @@ public class OrderController {
      * @return
      */
     @GetMapping("/rocket")
-    public Object msg(String msg,String tag){
+    public Object msg(){
         //1.创建消息载体对象  Message
-        Message message = new Message("orderTopic",tag,msg.getBytes());
+        Message message = new Message("orderTopic","tag","msg".getBytes());
         //2.通过注入的消息提供者对象发送消息
         try {
             SendResult send = producerMsg.getProducer().send(message);

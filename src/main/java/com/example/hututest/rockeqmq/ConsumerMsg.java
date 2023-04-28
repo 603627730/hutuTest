@@ -24,15 +24,13 @@ public class ConsumerMsg {
     @Value("${apache.rocketmq.namesrvAddr}")
     private String namesrvAddr;    //NameServer地址
 
-    //提供一个空构造器
-    public ConsumerMsg() {
-    }
 
     @PostConstruct
     //提供默认的消费者
     public void defaultMsgConsumer(){
         //1.指定消费者所消费的主题(队列) tag(2及标签，用于过滤消息)
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(pushConsumer);
+        consumer.setNamesrvAddr(namesrvAddr);
         //说明,如果要消费所有tag,用通配符*代替所有tag，如果明确指定
         try {
             consumer.subscribe("orderTopic","*");
