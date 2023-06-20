@@ -1,5 +1,6 @@
 package com.example.hututest.test;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -18,8 +19,23 @@ public class Example {
     public static final String TIMEZONE_NEWYORK = "America/New_York";
     public static final String YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss";
     public static void main(String[] args) {
-        Object o = Optional.ofNullable("null").orElse("");
-        System.out.println(o);
+        String fingerprint = "dfasfsafasfas";
+        String regex = "(?<=\\w{4}).*(?=\\w{4})";
+        System.out.println(fingerprint.replaceAll(regex, "**"));
+
+
+//        Example example = new Example();
+//
+//        System.out.println(example.getTime(1));
+    }
+
+    public String getTime(int days){
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DATE, -days); //得到前一天
+        Date date = calendar.getTime();
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        return df.format(date) + " ~ " + df.format(new Date());
     }
 
     public static Date minus(long miniSecconds) {
